@@ -1,3 +1,5 @@
 jQuery(function(){
-	$('textarea[placeholder]').placeholder();
+	$('.convert').click(function(){
+		$
+	});
 });
