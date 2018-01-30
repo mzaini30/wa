@@ -28,7 +28,10 @@
 			</div>
 		</div>
 		<br>
-		<script type="text/javascript" src='bin/jquery.min.js' async></script>
-		<script type="text/javascript" src='bin/app.js' async></script>
+		<script type="text/javascript">
+			document.writeln('<scr'+'ipt type=\"text/javascript\" src=\'bin/jquery.min.js?'+Math.random()+'\'></script>')
+		</script>
+		
+		<script type="text/javascript" src='bin/app.js'></script>
 	</body>
 </html>
