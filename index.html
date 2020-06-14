@@ -1,51 +1,36 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Whatsapp Link Generator</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-		<link rel="stylesheet" type="text/css" href="bin/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="bin/style.css">
-	</head>
-	<body>
-		<div class="container">
-			<h1 class="text-center">Whatsapp Link Generator</h1>		
-			<hr>
-			<div class="form-group">
-				<label for="nomor-whatsapp">Nomor Whatsapp:</label>
-				<input type="text" class="form-control" id="nomor-whatsapp" placeholder="Contoh: 6281545143654" required>
-			</div>
-			<div class="form-group">
-				<label for="isi-pesan">Isi Pesan:</label>
-				<textarea class="form-control" rows="5" id="isi-pesan" placeholder="Contoh: Saya mau order 5 buku sekarang."></textarea>
-			</div> 
-			<center>
-				<button class="btn btn-danger convert">Convert</button>
-			</center>
-			<div class="form-group">
-				<label for="hasil">Hasil:</label>
-				<input type="text" class="form-control" id="hasil" readonly>
-			</div>
-		</div>
-		<br>
-		<script type="text/javascript">
-			document.writeln('<scr'+'ipt type=\"text/javascript\" src=\'bin/jquery.min.js?'+Math.random()+'\'></scr'+'ipt>');
-			document.writeln('<scri'+'pt type=\"text/javascript\" src=\'bin/app.js?'+Math.random()+'\'></scr'+'ipt>');
-		</script>
-
-		<!-- Histats.com  (div with counter) --><div id="histats_counter" style="display: none;"></div>
-		<!-- Histats.com  START  (aync)-->
-		<script type="text/javascript">var _Hasync= _Hasync|| [];
-		_Hasync.push(['Histats.start', '1,3995429,4,501,95,18,00010000']);
-		_Hasync.push(['Histats.fasi', '1']);
-		_Hasync.push(['Histats.track_hits', '']);
-		(function() {
-		var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-		hs.src = ('//s10.histats.com/js15_as.js');
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-		})();</script>
-		<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?3995429&101" alt="" border="0"></a></noscript>
-		<!-- Histats.com  END  -->
-		
-	</body>
+<head>
+ <title>WA Generator</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <link rel="stylesheet" href="vendor/bootstrap.min.css">
+ <link rel="stylesheet" href="index.css">
+</head>
+<body>
+ <div class="vue">
+  <a href="https://github.com/mzaini30/wa" class="kanan"><img width="120" height="120" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+  <div class="container">
+   <center>
+    <h1>WA Generator</h1>
+    <hr>
+   </center>
+   <div class="form-group">
+    <div class="input-group">
+     <div class="input-group-addon">Nomor WA</div>
+     <input type="tel" class="form-control" placeholder="6281245673312" v-model="wa">
+    </div>
+   </div>
+   <div class="form-group"><label for="">Isi pesan</label><textarea name="" id="" cols="30" rows="10" class="form-control tinggi" v-model="pesan"></textarea></div>
+   <div class="form-group">
+    <div class="input-group">
+     <div class="input-group-addon">Hasil</div>
+     <input type="text" class="form-control" readonly :value="'https://wa.me/' + wa + '?text=' + olah_pesan(pesan)">
+    </div>
+   </div>
+  </div>
+ </div>
+ <script src="vendor/vue.min.js"></script>
+ <script src="index.js"></script>
+</body>
 </html>
